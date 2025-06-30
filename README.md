@@ -10,8 +10,6 @@ Since you're unable to download directly, here's what you can do:
 1. **Create a new file** named `README.md` in your project folder.
 2. **Copy and paste** the following content into it:
 
-<details>
-<summary>📄 Click to Expand README.md Content</summary>
 
 ```markdown
 # 🧠 Face & Hand Segmentation using SAM2
@@ -158,5 +156,4 @@ Main libraries used:
 ## 📝 License
 
 This project is licensed under the [MIT License](LICENSE) – free to use and modify.
-
 
