@@ -119,9 +119,8 @@ python app.py
 
 ## ⚠️ Limitations
 
-* 👋 May not detect occluded or partially visible hands
+* 👋 May not be able to detect occluded or partially visible hands
 * 👥 Supports multiple faces/hands sequentially, not in batches
-* 🌐 Dependent on Replicate API latency and availability
 
 ---
 
