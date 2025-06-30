@@ -1,34 +1,23 @@
-# Face-and-Hand-Segmentation
+Here's a fine-tuned and professionally styled version of your `README.md` content, with better structure, formatting consistency, and minor improvements in language clarity.
 
+---
 
-### ✅ Download Instructions
-
-Since you're unable to download directly, here's what you can do:
-
-#### Option 1: **Copy-Paste Manually**
-
-1. **Create a new file** named `README.md` in your project folder.
-2. **Copy and paste** the following content into it:
-
-
-```markdown
 # 🧠 Face & Hand Segmentation using SAM2
 
-This project performs **automated face and hand segmentation** in images using a combination of **YOLO + cvlib** for detection and **SAM2** (Segment Anything Model 2 via Replicate API) for fine-grained segmentation. A **Gradio web UI** is also included for quick testing.
+This project performs **automated face and hand segmentation** in images using a combination of **YOLOv8** and **cvlib** for detection, and **SAM2** (Segment Anything Model 2 via Replicate API) for fine-grained segmentation. A **Gradio web UI** is included for interactive testing.
 
-> **🔧 Created by Param Pandya**  
-> **🐍 Requires: Python 3.10**
+> 🔧 **Created by Param Pandya**
+> 🐍 **Python version:** 3.10+
 
 ---
 
 ## 📦 Features
 
-- Detects **faces** using `cvlib` (OpenCV + DNN backend)
-- Detects **hands** using **YOLOv8**
-- Sends bounding boxes to **SAM2** (via Replicate API)
-- Overlays the segmentation masks on the original image
-- Includes **CLI** and **Web UI** (via Gradio)
-- Fully automated — no manual input required
+* ✅ Face detection using `cvlib` (OpenCV + DNN)
+* ✅ Hand detection using YOLOv8 (`ultralytics`)
+* ✅ Precise segmentation via SAM2 (Replicate API)
+* ✅ CLI and web interface (Gradio)
+* ✅ Fully automated pipeline (no clicks needed)
 
 ---
 
@@ -49,31 +38,31 @@ This project performs **automated face and hand segmentation** in images using a
 
 ---
 
-## 🔧 Setup
+## 🔧 Setup Instructions
 
 ### ✅ Prerequisites
 
-- Python 3.10
-- Replicate API Key: Get one from https://replicate.com/account/api-tokens
+* Python 3.10
+* A Replicate API token (get one from [https://replicate.com/account/api-tokens](https://replicate.com/account/api-tokens))
 
-### 🛠 Installation
+### 🛠️ Installation
 
 ```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/your-username/face-hand-segmentation-sam2.git
 cd face-hand-segmentation-sam2
 
-# Create virtual environment (recommended)
+# (Optional) Create and activate a virtual environment
 python3.10 -m venv venv
-source venv/bin/activate  # On Windows: venv\\Scripts\\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
-````
+```
 
-### 🔐 Configure API Key
+### 🔐 Add Replicate API Key
 
-Create a `.env` file in the root folder:
+Create a `.env` file in the project root with the following line:
 
 ```
 REPLICATE_API_TOKEN=your_replicate_api_token
@@ -83,58 +72,68 @@ REPLICATE_API_TOKEN=your_replicate_api_token
 
 ## 🚀 Usage
 
-### 1. Command-Line Interface (CLI)
+### 1. CLI (Command Line Interface)
 
-Process an image via the command line:
+To process an image via command line:
 
 ```bash
 python main.py
 ```
 
-> ✏️ Make sure to place your test image in `input/` and update the filename in `main.py`.
+> ⚠️ Make sure to place your image inside the `input/` folder and update the path in `main.py` accordingly.
 
-### 2. Gradio Web UI
+---
 
-Launch an interactive browser app:
+### 2. Web UI (Gradio)
+
+To launch the interactive web app:
 
 ```bash
 python app.py
 ```
 
-Upload an image and view segmented output instantly.
+* Upload an image.
+* The system detects faces and hands.
+* SAM2 is used to generate masks.
+* A masked result image is returned.
 
 ---
 
 ## 🧠 How It Works
 
 1. **Detection**
-   Uses `cvlib` for **face detection** and **YOLOv8** (via `ultralytics`) for **hand detection**.
 
-2. **Segmentation (SAM2)**
-   The bounding boxes are sent to Replicate's **SAM2 model**, which returns segmentation masks.
+   * Uses `cvlib` for face detection
+   * Uses YOLOv8 for hand detection (`ultralytics`)
 
-3. **Visualization**
-   The masks are downloaded and overlaid on the original image using OpenCV and Matplotlib.
+2. **Segmentation**
+
+   * The detected bounding boxes are sent to the **SAM2** model via Replicate
+   * SAM2 returns high-quality mask URLs
+
+3. **Overlay**
+
+   * The masks are downloaded and overlaid on the input image using OpenCV and Matplotlib
 
 ---
 
-## ⚠️ Known Limitations
+## ⚠️ Limitations
 
-* 🧤 Hand detection might miss occluded or partially visible hands.
-* 👥 Works best for images with 1–2 subjects; batch processing not yet optimized.
-* 🌐 Performance depends on network/API response from Replicate.
+* 👋 May not detect occluded or partially visible hands
+* 👥 Supports multiple faces/hands sequentially, not in batches
+* 🌐 Dependent on Replicate API latency and availability
 
 ---
 
 ## ✅ Requirements
 
-See `requirements.txt` or install via:
+To install all required packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Main libraries used:
+**Key Libraries:**
 
 * `cvlib`, `opencv-python`
 * `ultralytics` (YOLOv8)
@@ -151,7 +150,11 @@ Main libraries used:
 
 ---
 
-## 📝 License
+## 📄 License
 
-This project is licensed under the [MIT License](LICENSE) – free to use and modify.
+This project is licensed under the [MIT License](LICENSE).
+Feel free to use, modify, and share.
+
+---
+
 
