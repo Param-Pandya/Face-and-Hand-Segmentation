@@ -2,7 +2,7 @@ from detect_yolo_cvlib import detect_face_hands
 from sam2_infer import call_sam2
 from visualize import overlay_masks
 
-image_path = "input/mannequin.jpg"
+image_path = "WIN_20250630_18_52_44_Pro.jpg"
 
 boxes = detect_face_hands(image_path)
 print("Detected boxes:", boxes)
