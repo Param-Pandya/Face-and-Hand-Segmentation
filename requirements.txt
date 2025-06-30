@@ -1,0 +1,7 @@
+cvlib
+opencv-python
+ultralytics
+matplotlib
+replicate
+python-dotenv
+gradio
