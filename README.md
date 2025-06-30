@@ -34,20 +34,18 @@ This project performs **automated face and hand segmentation** in images using a
 
 ## 📁 Project Structure
 
-```
-
+```plaintext
 .
 ├── app.py                  # Gradio UI
 ├── main.py                 # CLI pipeline
-├── detect\_yolo\_cvlib.py    # Face & hand detection
-├── sam2\_infer.py           # Calls SAM2 API (Replicate)
+├── detect_yolo_cvlib.py    # Face & hand detection
+├── sam2_infer.py           # Calls SAM2 API (Replicate)
 ├── visualize.py            # Overlays masks on the image
 ├── requirements.txt        # Python dependencies
 ├── input/                  # Input image directory
-├── sample\_outputs/         # Output images with segmentation
+├── sample_outputs/         # Output images with segmentation
 └── .env                    # Your API key (not committed)
-
-````
+```
 
 ---
 
