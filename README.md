@@ -1,6 +1,6 @@
 
 ---
-
+ 
 # 🧠 Face & Hand Segmentation using SAM2
 
 This project performs **automated face and hand segmentation** in images using a combination of **YOLOv8** and **cvlib** for detection, and **SAM2** (Segment Anything Model 2 via Replicate API) for fine-grained segmentation. A **Gradio web UI** is included for interactive testing.
